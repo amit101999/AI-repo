@@ -1,0 +1,18 @@
+This video from CampusX provides a comprehensive guide on implementing Structured Output using LangChain. Moving beyond standard text-based (unstructured) responses, structured output enables LLMs to communicate directly with machines, databases, and APIs.
+
+Key Takeaways:
+
+Structured vs. Unstructured Output: (2:09 - 5:17) While standard LLM responses are unstructured text, structured output provides data in a machine-readable format like JSON, which is essential for automation and data integration.
+The with_structured_output Function: (14:08) This is the core LangChain tool used to guide models to generate data in a specific, well-defined format.
+Methods to Define Schemas: The video demonstrates three primary ways to define the expected structure of the output:
+
+TypedDict: (15:33) Best for simple Python-based projects where you need type hints but minimal validation.
+
+Pydantic: (36:07) A powerful library for data validation, providing features like constraints, default values, and automatic type conversion, making it the preferred choice for robust applications.
+
+JSON Schema: (1:02:32) The universal standard, ideal for projects involving multiple programming languages where interoperability is required.
+Best Practices:
+
+Use Pydantic for data validation and reliability (1:03:26).
+Use JSON when working across different programming languages (1:02:58).
+The choice between JSON mode and Function Calling depends on the specific model and use case (e.g., using OpenAI function calling for agent tools vs. JSON mode for others) (1:05:33 - 1:06:28).
