@@ -1,0 +1,36 @@
+take input and then the retriver will give output in mutiple object
+tehre are mutiple retriver in langchain and they all are the runnables which can extend the system
+
+types of reteriver : wikipedia retriver , vector store db ,etc
+and also what type of seraching technique they are using so depend on that this will give type of retriver
+
+
+This video from the CampusX channel provides a detailed exploration of Retrievers in LangChain, which are essential components for building RAG (Retrieval-Augmented Generation) applications. A retriever is a component that fetches relevant documents from a data source based on a user's query.
+
+Key Takeaways & Concepts
+What is a Retriever? (02:01): It is a mechanism that takes a user query and returns relevant Document objects.
+Types of Retrievers (05:29): Retrievers are categorized based on their data source (e.g., Wikipedia, Vector Stores) or their search strategy.
+Detailed Retriever Types Discussed
+
+Wikipedia Retriever (09:55): Queries the Wikipedia API to fetch relevant articles based on keyword matching.
+
+Vector Store Retriever (15:50): The most common type, which performs semantic similarity searches using vector embeddings stored in databases like Chroma or FAISS. we can use advance 
+serach strategy since vector db uses a same type os serach algorithm
+
+Maximum Marginal Relevance (MMR) (22:09): An advanced strategy that balances relevance to the query with diversity in the results, preventing redundant information.
+Now since if 2 sentence are same will will vector wil return but this will be same but also not redundant data but it will be similar 
+
+Multi-Query Retriever (30:33): Uses an LLM to generate multiple versions of a single user query. This helps resolve ambiguity and ensures better document retrieval.
+Now if user does not give clarity on their prompt EG : how to be health this is very broad prom
+so now this will call again a LLM and make new queries that can be build form this and then call retriver and check the revelant question 
+after merging we will give top 5 or whatever result user want
+also here we need to tell which model we want to use to make queries from the prompt given
+
+
+Contextual Compression Retriever (39:49): Uses an LLM to compress or trim the retrieved documents, keeping only the information most relevant to the specific user query to improve the final response quality.
+when keep the relevant data and give user to data and remove the irrelevant data
+
+
+Conclusion:
+The video emphasizes that as you progress to building advanced RAG systems, choosing the right retrieval strategy is crucial for performance (49:49). You can experiment with these different 
+retrievers to refine how your application interacts with its underlying data.

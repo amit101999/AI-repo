@@ -1,0 +1,2 @@
+from langchain_community_retrievers.wikipedia_retriever import WikipediaRetriever
+
